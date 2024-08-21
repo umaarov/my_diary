@@ -9,8 +9,8 @@
         <h1>{{ $post->title }}</h1>
         <div>
             {!! nl2br(e($post->body)) !!}
-        </div>
-        <small>{{ $post->created_at->toFormattedDateString() }}</small>
+        </div><br>
+        <i><small>{{ $post->created_at }}</small></i>
         <p><strong>Tags</strong>: {{ implode(', ', $post->tags) }}</p>
     </article>
 
