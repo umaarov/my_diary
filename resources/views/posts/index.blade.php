@@ -2,6 +2,9 @@
 
 @section('breadcrumb')
     &gt; Posts
+    @if(request('search'))
+        &gt; Search: {{ \Illuminate\Support\Str::limit(request('search'), 30, '...') }}
+    @endif
 @endsection
 
 @section('content')
@@ -12,9 +15,9 @@
 
     @foreach ($posts as $post)
         <div>
-            <h2><a href="{{ route('posts.show', $post->id) }}">{{"$post->id. $post->title"}}</a></h2>
+            <h2><a href="{{ route('posts.show', $post->id) }}">{{ "$post->id. $post->title" }}</a></h2>
             <p>{{ \Illuminate\Support\Str::limit($post->body, 150) }}</p>
-            <small>{{ $post->created_at->diffForHumans() }}</small>
+            <small>{{ $post->created_at }}</small>
         </div><br>
     @endforeach
 

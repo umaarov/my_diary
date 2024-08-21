@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('breadcrumb')
-    &gt; Posts &gt; {{ " $post->id > $post->title"}}
+    &gt; Posts {{ " > $post->id"}}
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
             {!! nl2br(e($post->body)) !!}
         </div>
         <small>{{ $post->created_at->toFormattedDateString() }}</small>
-        <p>Tags: {{ implode(', ', $post->tags) }}</p>
+        <p>Tags: {{ implode('; ', $post->tags) }}</p>
     </article>
 
     <h3>Recommended Articles</h3>
