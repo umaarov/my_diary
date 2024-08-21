@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+    &gt; Posts
+@endsection
+
 @section('content')
     <form action="{{ route('posts.index') }}" method="GET"> <br>
         <input type="text" name="search" placeholder="Search posts..." value="{{ request('search') }}">

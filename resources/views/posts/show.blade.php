@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+    &gt; Posts &gt; {{ " $post->id > $post->title"}}
+@endsection
+
 @section('content')
     <article>
         <h1>{{ $post->title }}</h1>
