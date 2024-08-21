@@ -11,7 +11,7 @@ class Post extends Model
     protected $fillable = ['title', 'body', 'tags'];
 
     protected $casts = [
-        'tags' => 'array', // Cast tags as an array
+        'tags' => 'array',
     ];
 
     public function scopeSearch($query, $term)
