@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>My Blog</h1>
+        <h1>Umarov's Diary</h1>
         <nav>
             <a href="{{ route('posts.index') }}">Home</a>
         </nav>
